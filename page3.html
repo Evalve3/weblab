@@ -3,13 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Информация о языке программирования Python">
     <title>Использованные источники</title>
+
+    <style>
+        .content-columns {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .content-columns > * {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .content-columns > *:last-child {
+            margin-right: 0;
+        }
+    </style>
+
 </head>
 <body>
 <header>
+    <img src="python-logo.png" alt="Логотип Python" width="32" height="32">
     <h1>Использованные источники</h1>
-    <img src="python-logo.png" alt="Логотип Python" style="width:100px; height:100px;">
     <nav>
         <ul>
             <li><a href="page1.html">Главная</a></li>
@@ -19,24 +36,36 @@
     </nav>
 </header>
 
+
 <hr>
-
 <main>
-    <article>
-        <h2>Книги:</h2>
-        <ul>
-            <li>Python Crash Course by Eric Matthes</li>
-            <li>Automate the Boring Stuff with Python by Al Sweigart</li>
-        </ul>
-    </article>
+    <div class="content-columns">
+        <article>
+            <h2>Книги:</h2>
+            <ol>
+                <li>Python Crash Course by Eric Matthes</li>
+                <img src="book1.jpg" alt="Python Crash Course" width="100" height="150">
+                <li>Automate the Boring Stuff with Python by Al Sweigart</li>
+                <img src="book2.jpg" alt="Python Crash Course" width="100" height="150">
+            </ol>
+        </article>
 
-    <section>
-        <h2>Веб-ресурсы:</h2>
-        <ul>
-            <li><a href="https://www.python.org/">Официальный сайт Python</a></li>
-            <li><a href="https://realpython.com/">Real Python</a></li>
-        </ul>
-    </section>
+        <section>
+            <h2>Веб-ресурсы:</h2>
+            <ul>
+                <li><a href="https://www.python.org/">Официальный сайт Python</a></li>
+                <li><a href="https://realpython.com/">Real Python</a></li>
+            </ul>
+        </section>
+    </div>
+    <address>
+        Автор: Иван Веретин<br>
+        Email: evalve39@gmail.com
+    </address>
+
+    <p>Последнее обновление:
+        <time datetime="2024-01-01">1 января 2024</time>
+    </p>
 </main>
 
 <hr>
