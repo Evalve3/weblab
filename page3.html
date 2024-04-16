@@ -24,6 +24,25 @@
     </style>
 
 </head>
+
+
+<script>
+    function getInfo() {
+        alert("Веретин Иван\nГруппа 4136");
+    }
+
+    var images = ['book1.jpg', 'book2.jpg']; // замените на свои изображения
+    var index = 0;
+
+    function changeImage() {
+        var img = document.getElementsByName('galleryImage')[0];
+        img.src = images[index];
+        index = (index + 1) % images.length; // переключение индекса изображения
+    }
+
+    setInterval(changeImage, 3000); // смена изображения каждые 3 секунды
+</script>
+
 <body>
 <header>
     <img src="python-logo.png" alt="Логотип Python" width="32" height="32">
@@ -34,12 +53,14 @@
             <li><a href="page2.html">Страница HTML5</a></li>
             <li><a href="page3.html">Использованные источники</a></li>
         </ul>
+        <button onmouseover="getInfo()">Информация</button>
     </nav>
 </header>
 
 
 <hr>
 <main>
+
     <div class="content-columns">
         <article>
             <h2>Книги:</h2>
@@ -57,6 +78,8 @@
                 <li><a href="https://www.python.org/">Официальный сайт Python</a></li>
                 <li><a href="https://realpython.com/">Real Python</a></li>
             </ul>
+            <div id="gallery">
+                <img name="galleryImage" src="" alt="Gallery image" width="300" height="200"></div>
         </section>
     </div>
     <address>

@@ -8,9 +8,9 @@
     <link rel="stylesheet" type="text/css" href="page2.css">
 </head>
 <body>
-<header>
+<header name="mySection">
     <img src="python-logo.png" alt="Логотип Python" width="32" height="32">
-    <h1>Язык Python</h1>
+    <h1 name="myHeader">Язык Python</h1>
     <nav>
         <ol>
             <li><a href="page1.html">Главная</a></li>
@@ -19,6 +19,67 @@
         </ol>
     </nav>
 </header>
+
+<script>
+    let rows_count = 0;
+
+    function addRow() {
+        var table = document.getElementsByName('myTable')[0];
+        var row = table.insertRow(-1); // добавление строки в конец таблицы
+
+        // добавление ячеек в новую строку
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+
+        // установка содержимого ячеек
+        cell1.innerHTML = "";
+        cell2.innerHTML = "";
+        cell3.innerHTML = "";
+        cell4.innerHTML = "";
+        rows_count += 1;
+    }
+
+    const deleteRow = () => {
+        if (rows_count > 0) {
+            rows_count -= 1;
+            var table = document.getElementsByName('myTable')[0];
+            table.deleteRow(-1); // удаление последней строки таблицы
+        }
+    }
+</script>
+
+<script>
+    function changeFontSize() {
+        var header = document.getElementsByName('myHeader')[0];
+        var fontSize = Math.floor(Math.random() * 50) + 10; // случайный размер шрифта от 10 до 60
+        header.style.fontSize = fontSize + "px";
+    }
+
+    setInterval(changeFontSize, 500); // смена размера шрифта каждые полсекунды
+</script>
+
+
+
+<script>
+    function getRandomColor(min, max) {
+        var r = Math.floor(Math.random() * (max - min + 1)) + min; // случайное число от min до max
+        var g = Math.floor(Math.random() * (max - min + 1)) + min; // случайное число от min до max
+        var b = Math.floor(Math.random() * (max - min + 1)) + min; // случайное число от min до max
+        return "rgb(" + r + "," + g + "," + b + ")";
+    }
+
+    function changeTextColor() {
+        var allElements = document.getElementsByTagName("*"); // получение всех элементов на странице
+
+        for (var i = 0; i < allElements.length; i++) {
+            allElements[i].style.color = getRandomColor(1, 200); // изменение цвета текста каждого элемента
+        }
+    }
+
+    document.addEventListener('click', changeTextColor); // добавление обработчика событий для клика мыши
+</script>
 
 <hr>
 
@@ -53,7 +114,8 @@
                     <li value="1">Python имеет простой и понятный синтаксис, который делает его идеальным
                         для начинающих программистов.
                     </li>
-                    <li value="2">Большое количество документации, обучающих материалов и сообщества помогают новичкам быстро
+                    <li value="2">Большое количество документации, обучающих материалов и сообщества помогают новичкам
+                        быстро
                         освоиться в языке.
                     </li>
                 </ol>
@@ -64,17 +126,20 @@
                         таких как веб-разработка (Django, Flask, FastApi, Tornado), научные вычисления (NumPy, SciPy),
                         обработка данных (Pandas), машинное обучение (TensorFlow, PyTorch) и многое другое.
                     </li>
-                    <li value="4">Эти библиотеки и фреймворки позволяют разработчикам быстро создавать высокопроизводительные и
+                    <li value="4">Эти библиотеки и фреймворки позволяют разработчикам быстро создавать
+                        высокопроизводительные и
                         масштабируемые приложения с минимальными затратами времени и усилий.
                     </li>
                 </ol>
             </li>
             <li><strong>Кроссплатформенность:</strong>
                 <ol type="i" start="5">
-                    <li value="5"><em>Python</em> поддерживается на большинстве популярных операционных систем, включая Windows,
+                    <li value="5"><em>Python</em> поддерживается на большинстве популярных операционных систем, включая
+                        Windows,
                         macOS и различные дистрибутивы Linux.
                     </li>
-                    <li value="6">Это позволяет разработчикам писать приложения, которые могут работать на разных платформах без
+                    <li value="6">Это позволяет разработчикам писать приложения, которые могут работать на разных
+                        платформах без
                         необходимости значительной модификации кода.
                     </li>
                 </ol>
@@ -84,7 +149,8 @@
                     <li value="7">
                         Python имеет огромное и активное сообщество разработчиков по всему миру.
                     </li>
-                    <li value="8">Это обеспечивает доступ к множеству ресурсов, включая форумы, блоги, онлайн-курсы и т.д., что
+                    <li value="8">Это обеспечивает доступ к множеству ресурсов, включая форумы, блоги, онлайн-курсы и
+                        т.д., что
                         позволяет разработчикам быстро находить решения для своих задач.
                     </li>
                 </ol>
@@ -101,11 +167,13 @@
 
     <section>
         <h2>Применение Python</h2>
+        <button onclick="addRow()">Добавить строку</button>
+        <button onclick="deleteRow()">Удалить строку</button>
         <p>Python используется в различных сферах, включая веб-разработку, научные исследования, машинное обучение и
             многие другие.
             Для разных сфер используются разные технологии</p>
 
-        <table border="1" class="scrollable-table">
+        <table border="1" class="scrollable-table" name="myTable">
             <caption>Библиотеки и фреймворки</caption>
             <thead>
             <tr>
