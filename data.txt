@@ -1,0 +1,2 @@
+["zxc", "zxc", "zxc", "Разработчик", "NumPy", "Flask", "бд4сем2.txt"]
+["dsad", "asd", "asdsadd", "Аналитик", "NumPy, Matplotlib", "FastAPI", "Поляк2.txt"]

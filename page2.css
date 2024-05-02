@@ -70,14 +70,14 @@ table th:last-child, table td:last-child { /* скругление углов */
 }
 
 th, td {
-    border: 1px solid #007bff; /* Оформление границ */
+    border: 1px solid #808080; /* Оформление границ */
     text-align: left;
     padding: 8px;
     min-width: 100px;
 }
 
 th {
-    background-color: #007bff; /* Цвет фона для заголовков таблицы */
+    background-color: #808080; /* Цвет фона для заголовков таблицы */
     color: white;
 }
 

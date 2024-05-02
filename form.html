@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Форма</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="page2.css">
+    <style>
+        table {
+            border: none;
+            margin: 5px;
+        }
+
+        tr td {
+            border: none;
+        }
+
+        th {
+            border: none;
+            width: 200px
+        }
+
+        table {
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="cont">
+    <header>
+        <img src="python-logo.png" alt="Логотип Python" width="32" height="32">
+        <h1>Python</h1>
+    </header>
+    <hr>
+    <nav>
+        <ul>
+            <li><a href="page1.html">Главная</a></li>
+            <li><a href="page2.html">Страница HTML5</a></li>
+            <li><a href="page3.html">Использованные источники</a></li>
+            <li><a href="form.html">Форма посетителя сайта</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <main style="display: flex; justify-content: center;">
+        <h1>Анкета</h1>
+        <form method="POST" action="/cgi-bin/script.py">
+            <table>
+                <tr>
+                    <th>Фамилия</th>
+                    <td><input type="text" name="secondname"></td>
+                </tr>
+                <tr>
+                    <th>Имя</th>
+                    <td><input type="text" name="firstname"></td>
+                </tr>
+                <tr>
+                    <th>Отчество</th>
+                    <td><input type="text" name="patronymic"></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <th>Вид деятельности</th>
+                    <td><select name="job">
+                        <option>Разработчик</option>
+                        <option>Аналитик</option>
+                        <option>Тестировщик</option>
+                        <option>Системный администратор</option>
+                        <option>Другое</option>
+                    </select></td>
+                </tr>
+
+                <tr>
+                    <th colspan="2" style="height: 35px;"></th>
+                </tr>
+
+                <tr>
+                    <th rowspan="4">С какими библиотеками вы работали?</th>
+                    <td><input type="checkbox" name="libraries" value="NumPy">NumPy</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="libraries" value="Pandas">Pandas</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="libraries" value="Matplotlib">Matplotlib</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="libraries" value="TensorFlow">TensorFlow</td>
+                </tr>
+
+                <tr>
+                    <th colspan="2" style="height: 35px;"></th>
+                </tr>
+
+                <tr>
+                    <th rowspan="6">Какой ваш любимый Python фреймворк?</th>
+                    <td><input type="radio" name="framework" value="Django">Django</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="framework" value="Flask">Flask</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="framework" value="Pyramid">Pyramid</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="framework" value="FastAPI">FastAPI</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="framework" value="Tornado">Tornado</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="framework" value="Bottle">Bottle</td>
+                </tr>
+                <tr>
+                    <td><input type="file" name="file" value="Язык Python"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><input type="submit" value="Отправить"></td>
+                </tr>
+            </table>
+        </form>
+    </main>
+    <hr>
+    <footer>
+        <p>Язык Python 2024</p>
+        <address>
+            По вопросам писать: <a href="mailto:pr@python.ru">pr@python.ru</a><br>
+        </address>
+    </footer>
+</div>
+</body>
+</html>
