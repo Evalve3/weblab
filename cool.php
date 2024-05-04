@@ -19,6 +19,7 @@
             <li><a href=\"form.html\">Форма посетителя сайта</a></li>
             <li><a href=\"cool.php\">Информация о python</a></li>
               </ul>
+              <li><a href=\"indexajax.php\">Обновить версию библиотеки</a></li>
           </nav>
           <hr>
           <main>";
